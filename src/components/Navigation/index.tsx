@@ -16,7 +16,7 @@ export const Navigation = () => {
 
   return (
     <nav className="flex w-full items-center justify-between px-8 py-4 md:px-10">
-      <div className="hidden items-center gap-32 md:flex">
+      <div className="hidden items-center gap-24 lg:flex">
         {links.map(({ href, label, Icon }) => (
           <Link
             key={href}
@@ -29,7 +29,7 @@ export const Navigation = () => {
         ))}
       </div>
 
-      <div className="relative md:hidden">
+      <div className="relative lg:hidden">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Abrir menu"

@@ -77,27 +77,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-10 w-full overflow-x-auto md:mt-20">
-        <div className="mx-auto flex w-max items-start px-4">
-          <Card
-            size="sm"
-            className="mt-4"
-            specialAttribute="attack"
-            {...showcaseCharacters[0]}
-          />
-          <Card
-            size="sm"
-            className="-ml-6 sm:-ml-8"
-            specialAttribute="attack"
-            {...showcaseCharacters[1]}
-          />
-          <Card
-            size="sm"
-            className="-ml-6 mt-4 sm:-ml-6 sm:mt-8"
-            specialAttribute="attack"
-            {...showcaseCharacters[2]}
-          />
-        </div>
+      <section className="mt-10 flex w-full items-start justify-center gap-1 px-4 md:mt-20 sm:gap-4">
+        <Card
+          size="sm"
+          className="mt-4"
+          specialAttribute="attack"
+          {...showcaseCharacters[0]}
+        />
+        <Card
+          size="sm"
+          specialAttribute="attack"
+          {...showcaseCharacters[1]}
+        />
+        <Card
+          size="sm"
+          className="mt-4"
+          specialAttribute="attack"
+          {...showcaseCharacters[2]}
+        />
       </section>
 
       <Footer />

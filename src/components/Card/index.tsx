@@ -37,13 +37,14 @@ export const Card = ({
   const sizes =
     size === "sm"
       ? {
-          card: "h-[180px] w-[125px] outline-[6px] py-2 sm:h-[300px] sm:w-[210px] sm:outline-10 sm:py-4",
-          name: "w-[95px] text-[10px] sm:w-[150px] sm:text-sm",
-          image: "h-[90px] w-[90px] sm:h-[150px] sm:w-[150px]",
-          stats: "w-[75px] gap-1.5 sm:w-[120px] sm:gap-2.5",
-          statRow: "h-3 text-[7px] sm:h-5 sm:text-[10px]",
-          statBox: "w-[19px] border sm:w-[31px] sm:border-2",
-          statBar: "left-1.5 w-[calc(100%-7px)] sm:left-2.5 sm:w-[calc(100%-11px)]",
+          card: "h-[150px] w-[105px] outline-[5px] py-2 sm:h-[260px] sm:w-[180px] sm:outline-8 sm:py-3 lg:h-[300px] lg:w-[210px] lg:outline-10 lg:py-4",
+          name: "w-[85px] text-[9px] sm:w-[130px] sm:text-xs lg:w-[150px] lg:text-sm",
+          image: "h-[75px] w-[75px] sm:h-[130px] sm:w-[130px] lg:h-[150px] lg:w-[150px]",
+          stats: "w-[63px] gap-1 sm:w-[105px] sm:gap-2 lg:w-[120px] lg:gap-2.5",
+          statRow: "h-3 text-[6px] sm:h-4 sm:text-[8px] lg:h-5 lg:text-[10px]",
+          statBox: "w-[16px] border sm:w-[26px] sm:border-2 lg:w-[31px]",
+          statBar:
+            "left-1 w-[calc(100%-5px)] sm:left-2 sm:w-[calc(100%-9px)] lg:left-2.5 lg:w-[calc(100%-11px)]",
         }
       : {
           card: "h-[300px] w-[210px] outline-10 py-4",
