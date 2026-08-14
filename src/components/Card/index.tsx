@@ -11,9 +11,9 @@ interface CardProps {
 }
 
 const stats = [
-  { label: "Atack", key: "attack" as const },
-  { label: "Defense", key: "defense" as const },
-  { label: "Life", key: "life" as const },
+  { label: "vida", key: "life" as const },
+  { label: "Attack", key: "attack" as const },
+  { label: "defense", key: "defense" as const },
 ];
 
 export const Card = ({
@@ -24,41 +24,43 @@ export const Card = ({
   life,
   onClick,
 }: CardProps) => {
-  const displayName = name === "" ? "unknown" : name;
+  const displayName = name === "" ? "Unknown" : name;
   const displayImage =
     image === "" ? "/assets/characters/unknown.svg" : image;
 
   return (
     <div
       onClick={onClick}
-      className={`flex h-[310px] w-[210px] shrink-0 flex-col items-center justify-between rounded-[10px] bg-space py-4 outline-10 outline-white shadow-[0_5px_25px_#000] ${
+      className={`flex h-[300px] w-[210px] shrink-0 flex-col items-center justify-between rounded-[10px] bg-space py-4 outline-10 outline-white shadow-[0_5px_25px_#000] ${
         onClick ? "cursor-pointer" : ""
       }`}
     >
-      <div className="flex flex-col items-center justify-center gap-2">
-        <div className="relative w-[150px] text-base">
-          <p className="max-w-full truncate whitespace-nowrap">{displayName}</p>
-          <hr className="rounded-[2rem] border-2 border-white bg-white" />
+      <div className="flex flex-col items-center gap-3">
+        <div className="w-[150px]">
+          <p className="truncate text-center font-luckiest text-sm">
+            {displayName}
+          </p>
+          <div className="mt-1 h-[2px] w-full rounded-full border border-white bg-neon" />
         </div>
 
         <img
           src={displayImage}
           alt={displayName}
-          className="h-[150px] w-[150px] rounded-[10px] border-2 border-white object-cover"
+          className="h-[150px] w-[150px] rounded-[10px] bg-white object-cover"
         />
       </div>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2.5">
         {stats.map(({ label, key }) => (
           <div
             key={key}
-            className="relative flex w-[100px] font-luckiest text-[0.8rem]"
+            className="relative flex h-5 w-[120px] items-center font-luckiest text-[10px]"
           >
-            <div className="-ml-[10%] flex w-[30%] justify-center rounded-lg border-2 border-white">
+            <div className="z-10 flex h-full w-[31px] shrink-0 items-center justify-center rounded-lg border-2 border-white">
               {key === "attack" ? attack : key === "defense" ? defense : life}
             </div>
-            <div className="flex w-[70%] justify-center">{label}</div>
-            <span className="absolute bottom-0 left-0 h-[2px] w-full rounded-tr-[2rem] rounded-br-[2rem] bg-white" />
+            <span className="z-10 w-full text-center">{label}</span>
+            <div className="absolute left-2.5 h-[2px] w-[calc(100%-11px)] rounded-full bg-white" />
           </div>
         ))}
       </div>
