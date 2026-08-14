@@ -14,7 +14,6 @@ export default function Generate() {
       const newCharacter = await generateCharacter();
       setUserCharacter(newCharacter);
       addCharacter(newCharacter);
-      setUserCharacter(newCharacter);
       consumeKey();
     } else {
       alert("Você não tem chaves suficientes para gerar um personagem!");
@@ -22,7 +21,7 @@ export default function Generate() {
   };
 
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-center gap-8">
+    <div className="flex min-h-dvh w-full flex-col items-center justify-center gap-8 py-8">
       <Card
         image={userCharacter?.image || ""}
         name={userCharacter?.name || ""}

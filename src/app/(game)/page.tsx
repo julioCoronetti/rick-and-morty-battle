@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import { Card } from "@/components/Card";
@@ -50,9 +51,11 @@ export default function Home() {
           <h2 className="font-luckiest text-8xl leading-none text-neon drop-shadow-[0_0_8px_rgba(231,246,17,0.16)]">
             BATTLE
           </h2>
-          <img
+          <Image
             src="/assets/weapon.svg"
             alt=""
+            width={143}
+            height={143}
             className="absolute -right-2 top-2 w-32 md:-right-10 md:w-40"
           />
         </div>

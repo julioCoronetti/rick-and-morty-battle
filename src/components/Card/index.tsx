@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface CardProps {
   image: string;
   name: string;
@@ -45,9 +47,11 @@ export const Card = ({
           <div className="mt-1 h-[2px] w-full rounded-full border border-white bg-neon" />
         </div>
 
-        <img
+        <Image
           src={displayImage}
           alt={displayName}
+          width={150}
+          height={150}
           className="h-[150px] w-[150px] rounded-[10px] bg-white object-cover"
         />
       </div>
