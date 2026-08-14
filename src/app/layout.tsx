@@ -11,6 +11,7 @@ const luckiestGuy = Luckiest_Guy({
 });
 
 const reemKufiFun = Reem_Kufi_Fun({
+  weight: "600",
   subsets: ["latin"],
   variable: "--font-reem-kufi",
 });

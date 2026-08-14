@@ -43,26 +43,53 @@ export default function Home() {
   };
 
   return (
-    <main
-      className="flex w-full flex-col items-center justify-between gap-20"
-      style={{ height: "250vh" }}
-    >
-      <div className="mt-[20vh] flex flex-col items-center">
-        <img src="/assets/logo.svg" alt="Rick and Morty Battle" />
-        <p className="text-lg">Enter a turn-based battle with your favorite characters!</p>
-        <button
-          onClick={goToBattlePage}
-          className="mt-20 cursor-pointer rounded-[10px] border-2 border-transparent bg-neon px-8 py-2 font-luckiest text-2xl text-space outline-1 outline-white transition-colors duration-300 hover:bg-white"
-          style={{ backgroundClip: "padding-box" }}
-        >
-          BATTLE
-        </button>
-      </div>
+    <main className="flex w-full flex-col items-center overflow-x-hidden">
+      <section className="flex flex-col items-center px-4 pt-20 text-center md:pt-28">
+        <div className="relative">
+          <h1 className="font-luckiest text-4xl text-neon">Rick and morty</h1>
+          <h2 className="font-luckiest text-8xl leading-none text-neon drop-shadow-[0_0_8px_rgba(231,246,17,0.16)]">
+            BATTLE
+          </h2>
+          <img
+            src="/assets/weapon.svg"
+            alt=""
+            className="absolute -right-2 top-2 w-32 md:-right-10 md:w-40"
+          />
+        </div>
 
-      <section className="flex gap-1.5 [&>div:nth-child(1)]:mt-10 [&>div:nth-child(1)]:-rotate-15 [&>div:nth-child(1)]:z-[1] [&>div:nth-child(2)]:-mx-8 [&>div:nth-child(2)]:z-[2] [&>div:nth-child(3)]:mt-8 [&>div:nth-child(3)]:rotate-10 [&>div:nth-child(3)]:z-[3]">
-        {showcaseCharacters.map((character) => (
-          <Card key={character.name} specialAttribute="attack" {...character} />
-        ))}
+        <p className="mt-6 max-w-sm font-semibold text-xl text-white md:max-w-md">
+          Entre em uma batalha de turnos com seus personagens favoritos!
+        </p>
+
+        <div className="relative mt-12 md:mt-16">
+          <div className="absolute inset-0 rounded-[10px] border border-neon" />
+          <button
+            onClick={goToBattlePage}
+            className="relative translate-x-[5px] translate-y-[5px] cursor-pointer rounded-[10px] bg-neon px-12 py-4 font-luckiest text-3xl text-space transition-colors duration-300 hover:bg-white"
+          >
+            BATALHAR
+          </button>
+        </div>
+      </section>
+
+      <section className="mt-16 w-full overflow-x-auto md:mt-20">
+        <div className="mx-auto flex w-max items-start px-4">
+          <Card
+            className="mt-8"
+            specialAttribute="attack"
+            {...showcaseCharacters[0]}
+          />
+          <Card
+            className="-ml-16"
+            specialAttribute="attack"
+            {...showcaseCharacters[1]}
+          />
+          <Card
+            className="-ml-14 mt-8"
+            specialAttribute="attack"
+            {...showcaseCharacters[2]}
+          />
+        </div>
       </section>
 
       <Footer />

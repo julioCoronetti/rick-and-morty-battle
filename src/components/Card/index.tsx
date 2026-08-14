@@ -7,6 +7,7 @@ interface CardProps {
   defense: number | "??";
   life: number | "??";
   specialAttribute: "attack" | "defense" | "life";
+  className?: string;
   onClick?: () => void;
 }
 
@@ -22,6 +23,7 @@ export const Card = ({
   attack,
   defense,
   life,
+  className = "",
   onClick,
 }: CardProps) => {
   const displayName = name === "" ? "Unknown" : name;
@@ -31,7 +33,7 @@ export const Card = ({
   return (
     <div
       onClick={onClick}
-      className={`flex h-[300px] w-[210px] shrink-0 flex-col items-center justify-between rounded-[10px] bg-space py-4 outline-10 outline-white shadow-[0_5px_25px_#000] ${
+      className={`flex h-[300px] w-[210px] shrink-0 flex-col items-center justify-between rounded-[10px] bg-space py-4 outline-10 outline-white shadow-[0_5px_25px_#000] ${className} ${
         onClick ? "cursor-pointer" : ""
       }`}
     >
