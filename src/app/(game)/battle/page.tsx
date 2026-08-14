@@ -39,7 +39,7 @@ export default function Battle() {
   return (
     <section className="flex h-screen w-full flex-col items-center justify-center gap-4">
       <h2 className="font-luckiest text-[25pt]">Select your character</h2>
-      <div className="character-selector flex w-[1024px] max-w-full flex-row gap-8 overflow-x-auto rounded-[10px] bg-gray-300 p-8">
+      <div className="character-selector flex w-full max-w-5xl flex-row gap-8 overflow-x-auto rounded-[10px] bg-panel p-8">
         {characters.map((character: Character) => (
           <Card
             key={character.id}

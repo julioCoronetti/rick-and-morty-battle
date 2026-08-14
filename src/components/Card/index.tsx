@@ -31,7 +31,7 @@ export const Card = ({
   return (
     <div
       onClick={onClick}
-      className={`flex h-[310px] w-[210px] shrink-0 flex-col items-center justify-between rounded-[10px] bg-blue-800 py-4 outline-10 outline-white shadow-[0_5px_25px_#000] ${
+      className={`flex h-[310px] w-[210px] shrink-0 flex-col items-center justify-between rounded-[10px] bg-space py-4 outline-10 outline-white shadow-[0_5px_25px_#000] ${
         onClick ? "cursor-pointer" : ""
       }`}
     >

@@ -52,7 +52,7 @@ export default function Home() {
         <p className="text-lg">Enter a turn-based battle with your favorite characters!</p>
         <button
           onClick={goToBattlePage}
-          className="mt-20 cursor-pointer rounded-[10px] border-2 border-transparent bg-yellow px-8 py-2 font-luckiest text-2xl text-blue-800 outline-1 outline-white transition-colors duration-300 hover:bg-white"
+          className="mt-20 cursor-pointer rounded-[10px] border-2 border-transparent bg-neon px-8 py-2 font-luckiest text-2xl text-space outline-1 outline-white transition-colors duration-300 hover:bg-white"
           style={{ backgroundClip: "padding-box" }}
         >
           BATTLE

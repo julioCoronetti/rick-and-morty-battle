@@ -10,9 +10,9 @@ export default function Characters() {
   return (
     <>
       <div className="flex flex-col items-center gap-8 p-8">
-        <h2 className="mt-24 font-luckiest text-4xl text-yellow">My Characters</h2>
+        <h2 className="mt-16 font-luckiest text-4xl text-neon">My Characters</h2>
         {characters.length > 0 && (
-          <div className="grid grid-cols-3 gap-12 rounded-[10px] bg-gray-300 p-8 shadow-[5px_5px_25px_#00000050] lg:grid-cols-2 md:grid-cols-1">
+          <div className="grid grid-cols-1 gap-12 rounded-[10px] bg-panel p-8 shadow-[5px_5px_25px_#00000050] md:grid-cols-2 xl:grid-cols-3">
             {characters.map((character) => (
               <Card
                 key={character.id}
