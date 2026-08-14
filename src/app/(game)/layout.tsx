@@ -6,7 +6,7 @@ export default function GameLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex min-h-dvh w-full flex-col items-center">
       <Navigation />
       {children}
     </div>

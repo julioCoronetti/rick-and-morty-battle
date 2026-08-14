@@ -49,3 +49,17 @@ export const ClockIcon = ({ size }: IconProps) => (
     <path d="M128,80v48a8,8,0,0,0,2.3,5.7l24,24" />
   </IconBase>
 );
+
+export const StarIcon = ({ size }: IconProps) => (
+  <IconBase size={size}>
+    <path d="M128,28l23.5,67.6,71.6,1.5-57,43.4L186.8,208.9,128,168l-58.8,40.9L62,140.5,5,97.1l71.6-1.5Z" />
+  </IconBase>
+);
+
+export const MenuIcon = ({ size }: IconProps) => (
+  <IconBase size={size}>
+    <path d="M32,128h192" />
+    <path d="M32,64h192" />
+    <path d="M32,192h192" />
+  </IconBase>
+);
