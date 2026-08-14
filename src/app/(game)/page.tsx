@@ -77,21 +77,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-10 flex w-full items-start justify-center gap-1 px-4 md:mt-20 sm:gap-4">
+      <section className="mt-10 flex w-full items-start justify-center px-4 md:mt-20">
         <Card
           size="sm"
-          className="mt-4"
+          className="z-[1] mt-4 -rotate-6"
           specialAttribute="attack"
           {...showcaseCharacters[0]}
         />
         <Card
           size="sm"
+          className="z-[2] -ml-6 sm:-ml-10"
           specialAttribute="attack"
           {...showcaseCharacters[1]}
         />
         <Card
           size="sm"
-          className="mt-4"
+          className="z-[3] -ml-6 rotate-6 sm:-ml-10"
           specialAttribute="attack"
           {...showcaseCharacters[2]}
         />
