@@ -15,16 +15,16 @@ export const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex w-full items-center justify-between px-8 py-4 md:px-10">
-      <div className="hidden items-center gap-24 lg:flex">
+    <nav className="flex w-full items-center justify-between px-10 py-5 md:px-16">
+      <div className="hidden items-center gap-12 lg:flex">
         {links.map(({ href, label, Icon }) => (
           <Link
             key={href}
             href={href}
-            className="flex items-center gap-5 font-reem text-xl text-white no-underline transition-colors duration-300 hover:text-neon"
+            className="flex items-center gap-4 font-reem text-base font-semibold text-white no-underline transition-colors duration-300 hover:text-neon"
           >
             {label}
-            <Icon size={21} />
+            <Icon size={18} />
           </Link>
         ))}
       </div>
@@ -44,10 +44,10 @@ export const Navigation = () => {
                 key={href}
                 href={href}
                 onClick={() => setMenuOpen(false)}
-                className="flex items-center gap-4 font-reem text-xl text-white no-underline"
+                className="flex items-center gap-3 font-reem text-base font-semibold text-white no-underline"
               >
                 {label}
-                <Icon size={21} />
+                <Icon size={18} />
               </Link>
             ))}
           </div>
@@ -56,7 +56,7 @@ export const Navigation = () => {
 
       <Link
         href="/battle"
-        className="rounded-md bg-neon px-8 py-2 font-luckiest text-2xl text-space no-underline transition-colors duration-300 hover:bg-white md:px-12 md:py-4 md:text-3xl"
+        className="flex h-[36px] items-center rounded-md bg-neon px-6 font-luckiest text-base leading-none text-space no-underline transition-colors duration-300 hover:bg-white md:h-[48px] md:px-8 md:text-2xl"
       >
         BATALHAR
       </Link>
