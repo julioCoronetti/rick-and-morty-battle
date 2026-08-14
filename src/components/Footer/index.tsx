@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <footer className="relative mt-16 w-full md:mt-24">
+    <footer className="relative mt-24 w-full md:mt-16">
       <Image
         src="/assets/spaceShip.svg"
         alt=""

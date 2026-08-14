@@ -56,11 +56,11 @@ export default function Home() {
             alt=""
             width={143}
             height={143}
-            className="absolute -right-2 top-2 w-32 md:-right-10 md:w-40"
+            className="absolute -right-2 top-5 w-28 md:left-full md:-ml-14 md:right-auto md:w-36"
           />
         </div>
 
-        <p className="mt-6 max-w-sm font-semibold text-xl text-white md:max-w-md">
+        <p className="mt-14 max-w-sm font-semibold text-xl text-white md:max-w-md">
           Entre em uma batalha de turnos com seus personagens favoritos!
         </p>
 
@@ -83,12 +83,12 @@ export default function Home() {
             {...showcaseCharacters[0]}
           />
           <Card
-            className="-ml-16"
+            className="-ml-8"
             specialAttribute="attack"
             {...showcaseCharacters[1]}
           />
           <Card
-            className="-ml-14 mt-8"
+            className="-ml-6 mt-8"
             specialAttribute="attack"
             {...showcaseCharacters[2]}
           />
