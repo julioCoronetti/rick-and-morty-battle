@@ -45,10 +45,12 @@ export default function Home() {
 
   return (
     <main className="flex w-full flex-col items-center overflow-x-hidden">
-      <section className="flex flex-col items-center px-4 pt-20 text-center md:pt-28">
+      <section className="flex flex-col items-center px-4 pt-14 text-center md:pt-28">
         <div className="relative">
-          <h1 className="font-luckiest text-4xl text-neon">Rick and morty</h1>
-          <h2 className="font-luckiest text-8xl leading-none text-neon drop-shadow-[0_0_8px_rgba(231,246,17,0.16)]">
+          <h1 className="font-luckiest text-3xl text-neon md:text-4xl">
+            Rick and morty
+          </h1>
+          <h2 className="font-luckiest text-6xl leading-none text-neon drop-shadow-[0_0_8px_rgba(231,246,17,0.16)] md:text-7xl lg:text-8xl">
             BATTLE
           </h2>
           <Image
@@ -56,39 +58,42 @@ export default function Home() {
             alt=""
             width={143}
             height={143}
-            className="absolute -right-2 top-5 w-28 md:left-full md:-ml-14 md:right-auto md:w-36"
+            className="absolute -right-2 top-4 w-24 md:left-full md:-ml-14 md:right-auto md:top-5 md:w-32 lg:w-36"
           />
         </div>
 
-        <p className="mt-14 max-w-sm font-semibold text-xl text-white md:max-w-md">
+        <p className="mt-10 max-w-sm font-semibold text-lg text-white md:mt-14 md:max-w-md md:text-xl">
           Entre em uma batalha de turnos com seus personagens favoritos!
         </p>
 
-        <div className="relative mt-12 md:mt-16">
-          <div className="absolute inset-0 rounded-[10px] border border-neon" />
+        <div className="relative mt-10 md:mt-16">
+          <div className="absolute inset-0 border border-neon" />
           <button
             onClick={goToBattlePage}
-            className="relative translate-x-[5px] translate-y-[5px] cursor-pointer rounded-[10px] bg-neon px-12 py-4 font-luckiest text-3xl text-space transition-colors duration-300 hover:bg-white"
+            className="relative translate-x-[5px] translate-y-[5px] cursor-pointer bg-neon px-8 py-3 font-luckiest text-2xl text-space transition-colors duration-300 hover:bg-white md:px-12 md:py-4 md:text-3xl"
           >
             BATALHAR
           </button>
         </div>
       </section>
 
-      <section className="mt-16 w-full overflow-x-auto md:mt-20">
+      <section className="mt-10 w-full overflow-x-auto md:mt-20">
         <div className="mx-auto flex w-max items-start px-4">
           <Card
-            className="mt-8"
+            size="sm"
+            className="mt-4"
             specialAttribute="attack"
             {...showcaseCharacters[0]}
           />
           <Card
-            className="-ml-8"
+            size="sm"
+            className="-ml-6 sm:-ml-8"
             specialAttribute="attack"
             {...showcaseCharacters[1]}
           />
           <Card
-            className="-ml-6 mt-8"
+            size="sm"
+            className="-ml-6 mt-4 sm:-ml-6 sm:mt-8"
             specialAttribute="attack"
             {...showcaseCharacters[2]}
           />
