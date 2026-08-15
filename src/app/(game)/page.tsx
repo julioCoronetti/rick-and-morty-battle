@@ -80,19 +80,19 @@ export default function Home() {
       <section className="mt-10 flex w-full items-start justify-center px-4 md:mt-20">
         <Card
           size="sm"
-          className="z-[1] mt-4 -rotate-6"
+          className="z-[1] mt-[26px] -rotate-[15deg] sm:mt-[44px] lg:mt-[51px]"
           specialAttribute="attack"
           {...showcaseCharacters[0]}
         />
         <Card
           size="sm"
-          className="z-[2] -ml-6 sm:-ml-10"
+          className="z-[2] -ml-[13px] sm:-ml-[23px] lg:-ml-[26px]"
           specialAttribute="attack"
           {...showcaseCharacters[1]}
         />
         <Card
           size="sm"
-          className="z-[3] -ml-6 rotate-6 sm:-ml-10"
+          className="z-[3] -ml-[15px] mt-[24px] rotate-[10deg] sm:-ml-[26px] sm:mt-[42px] lg:-ml-[31px] lg:mt-[48px]"
           specialAttribute="attack"
           {...showcaseCharacters[2]}
         />
